@@ -5,6 +5,7 @@ using SME.Components;
 namespace Matmul
 {
 
+    [InitializedBus]
     public interface MatrixMeta : IBus
     {
         bool valid { get; set; }
@@ -14,6 +15,7 @@ namespace Matmul
         int stride { get; set; }
     }
 
+    [InitializedBus]
     public interface Data : IBus
     {
         int data { get; set; }

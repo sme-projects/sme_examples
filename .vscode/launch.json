@@ -5,14 +5,27 @@
    "version": "0.2.0",
    "configurations": [
         {
-            "name": ".NET Core Launch (console)",
+            "name": ".NET Core Launch Counter (console)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build Counter",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/Counter/bin/Debug/netcoreapp3.1/Counter.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Counter",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch Matmul (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build Matmul",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Matmul/bin/Debug/netcoreapp3.1/Matmul.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Matmul",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
