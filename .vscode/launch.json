@@ -18,6 +18,19 @@
             "stopAtEntry": false
         },
         {
+            "name": ".NET Core Launch AES256CBC (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build AES256CBC",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/AES256CBC/bin/Debug/netcoreapp3.1/AES256CBC.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/AES256CBC",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": ".NET Core Launch Matmul (console)",
             "type": "coreclr",
             "request": "launch",
@@ -26,6 +39,32 @@
             "program": "${workspaceFolder}/Matmul/bin/Debug/netcoreapp3.1/Matmul.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Matmul",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch PipelinedMIPS (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build PipelinedMIPS",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/PipelinedMIPS/bin/Debug/netcoreapp3.1/PipelinedMIPS.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/PipelinedMIPS",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch HistogramBinning (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build HistogramBinning",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/HistogramBinning/bin/Debug/netcoreapp3.1/HistogramBinning.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/HistogramBinning",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
