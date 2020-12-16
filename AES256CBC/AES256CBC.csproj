@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="SME" Version="0.4.2" />
+    <PackageReference Include="SME.Tracer" Version="0.4.2" />
+    <PackageReference Include="SME.VHDL" Version="0.4.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>AES256CBC</RootNamespace>
+  </PropertyGroup>
+
+</Project>
