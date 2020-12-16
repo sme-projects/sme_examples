@@ -78,7 +78,7 @@ namespace PipelinedMIPS
             [OutputBus]
             DEBUG_SHUTDOWN shut;
 
-            byte[] program = System.IO.File.ReadAllBytes("/home/carljohnsen/Downloads/fibforw");
+            byte[] program = System.IO.File.ReadAllBytes("fibforw");
 
             protected override void OnTick()
             {
