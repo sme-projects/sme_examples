@@ -3,7 +3,7 @@ using SME;
 using SME.Components;
 using SME.VHDL;
 
-namespace SME_Binning
+namespace HistogramBinning
 {
 
     public class Tester : SimulationProcess
@@ -98,7 +98,6 @@ namespace SME_Binning
         {
             // Ensure that the network is waiting for input
             await ClockAsync();
-            return;
 
             /*****
              *
@@ -110,6 +109,7 @@ namespace SME_Binning
             uint[] output_data = { 9, 5, 15 };
             await Test(true, input_idxs, input_data, output_data);
 
+            return;
             /*****
              *
              * Continueous test

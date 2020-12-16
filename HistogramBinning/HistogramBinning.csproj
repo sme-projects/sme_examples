@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<ItemGroup>
+    <PackageReference Include="SME" Version="0.4.2" />
+    <PackageReference Include="SME.Tracer" Version="0.4.2" />
+    <PackageReference Include="SME.VHDL" Version="0.4.2" />
+    <PackageReference Include="SME.GraphViz" Version="0.4.2" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <ProjectReference Include="E:\git\sme-clean\src\SME\SME.csproj" />
+    <ProjectReference Include="E:\git\sme-clean\src\SME.Tracer\SME.Tracer.csproj" />
+    <ProjectReference Include="E:\git\sme-clean\src\SME.VHDL\SME.VHDL.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>HistogramBinning</RootNamespace>
+  </PropertyGroup>
+
+</Project>

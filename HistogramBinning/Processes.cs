@@ -3,7 +3,7 @@ using SME;
 using SME.Components;
 using SME.VHDL;
 
-namespace SME_Binning
+namespace HistogramBinning
 {
 
     [ClockedProcess]
@@ -45,9 +45,9 @@ namespace SME_Binning
                 switch (forward.option)
                 {
                     default:
-                    case ForwardOptions.dont: output.val = brama.Data; break;
-                    case ForwardOptions.last: output.val = last.Data; break;
-                    case ForwardOptions.intermediate: output.val = adder.val; break;
+                    case 0: output.val = brama.Data; break;
+                    case 2: output.val = last.Data; break;
+                    case 1: output.val = adder.val; break;
                 }
             else
                 output.val = 0;
@@ -118,22 +118,22 @@ namespace SME_Binning
 
         bool last_valid = false;
         int last_idx = 0;
-        uint last_data = 0;
+        uint last_data_reg = 0;
 
         protected override void OnTick()
         {
-            last.Data = last_data;
+            last.Data = last_data_reg;
 
             if (last_valid && input.idx == last_idx)
-                forward.option = ForwardOptions.last;
+                forward.option = 2;
             else if (intermediate.valid && input.idx == intermediate.idx)
-                forward.option = ForwardOptions.intermediate;
+                forward.option = 1;
             else
-                forward.option = ForwardOptions.dont;
-            
+                forward.option = 0;
+
             last_valid = intermediate.valid;
             last_idx = intermediate.idx;
-            last_data = adder.val;
+            last_data_reg = adder.val;
         }
     }
 
@@ -145,7 +145,7 @@ namespace SME_Binning
         [OutputBus]
         public Idle output = Scope.CreateBus<Idle>();
 
-        protected override void OnTick() 
+        protected override void OnTick()
         {
             output.flg = !input.valid;
         }

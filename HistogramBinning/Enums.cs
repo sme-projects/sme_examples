@@ -1,6 +1,6 @@
 using System;
 
-namespace SME_Binning
+namespace HistogramBinning
 {
 
     public enum ForwardOptions

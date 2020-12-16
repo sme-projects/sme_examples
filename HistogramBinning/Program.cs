@@ -3,7 +3,7 @@ using SME;
 using SME.Components;
 using SME.VHDL;
 
-namespace SME_Binning
+namespace HistogramBinning
 {
 
     class MainClass
@@ -48,8 +48,8 @@ namespace SME_Binning
                 tester.idle = idle.output;
 
                 sim
-                    .AddTopLevelInputs(input_pipe.input, bram.ControlB)
-                    .AddTopLevelOutputs(bram.ReadResultB, idle.output)
+                    .AddTopLevelInputs(input_pipe.input, tester.bram_ctrl)
+                    .AddTopLevelOutputs(tester.bram_result, idle.output)
                     .BuildCSVFile()
                     .BuildVHDL()
                     .Run();

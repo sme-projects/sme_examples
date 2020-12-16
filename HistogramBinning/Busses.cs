@@ -3,7 +3,7 @@ using SME;
 using SME.Components;
 using SME.VHDL;
 
-namespace SME_Binning
+namespace HistogramBinning
 {
 
     [InitializedBus]
@@ -23,7 +23,7 @@ namespace SME_Binning
     [InitializedBus]
     public interface Forward : IBus
     {
-        ForwardOptions option { get; set; }
+        int option { get; set; }
     }
 
     public interface Idle : IBus
